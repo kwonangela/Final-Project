@@ -1,14 +1,14 @@
 .navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    background-color: #467172;
-    padding: 5 20px;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #467172;
+  padding: 5 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
 
 .navBarInfo {
   color: #fff;
@@ -23,7 +23,8 @@
   }
 }
 
-#navbar-buttons, #navbar-log {
+#navbar-buttons,
+#navbar-log {
   padding: 17px 30px;
   border-radius: 50px;
   border: 0;
@@ -32,20 +33,22 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 15px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   color: black;
 }
+
 #navbar-log {
   margin-right: 10px;
   margin-left: 0px;
 }
 
 @media screen and (max-width: 390px) {
-  .navBarInfo{
+  .navBarInfo {
     font-size: 20px;
     padding-right: 0px;
     padding-left: 10px;
   }
+
   #navbar-buttons {
     padding: 10px 10px;
     font-size: 12px;
@@ -53,7 +56,8 @@
     margin-right: 0px;
     margin-left: 20px;
   }
-  #navbar-log{
+  
+  #navbar-log {
     padding: 1px 7px;
     font-size: 12px;
     text-align: center;
@@ -65,13 +69,14 @@
   }
 }
 
-#navbar-buttons:hover, #navbar-log:hover {
-  background-color: #1DC9A0;
+#navbar-buttons:hover,
+#navbar-log:hover {
+  background-color: #1dc9a0;
   cursor: pointer;
   letter-spacing: 3px;
   background-color: #1DC9A0(261deg 80% 48%);
   color: hsl(0, 0%, 100%);
-  box-shadow: #1DC9A0 0px 7px 29px 0px;
+  box-shadow: #1dc9a0 0px 7px 29px 0px;
 }
 
 #barButton {
@@ -87,6 +92,3 @@
   transform: translateY(10px);
   transition: 100ms;
 }
-
-
-  

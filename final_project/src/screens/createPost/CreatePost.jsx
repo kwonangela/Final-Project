@@ -3,14 +3,12 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./createpost.css";
 import { createPost } from "../../services/posts";
-import Subreddit from "../subreddit/Subreddit"
 
-const CreatePost = ({subID}) => {
+const CreatePost = ({ subID }) => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [img_url, setImageUrl] = useState("");
   const [submitted, setSubmitted] = useState(false);
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,10 +23,8 @@ const CreatePost = ({subID}) => {
     };
     try {
       await createPost(post);
-      console.log("Post submitted successfully");
       setSubmitted(true);
-      window.location.reload()
-      
+      window.location.reload();
     } catch (error) {
       console.error("Error submitting the post: ", error);
     }
@@ -37,6 +33,7 @@ const CreatePost = ({subID}) => {
   if (submitted) {
     return null;
   }
+  
   return (
     <div className="create-post">
       <div className="close-button-container">

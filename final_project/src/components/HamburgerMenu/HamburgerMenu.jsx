@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { getSubs } from "../../services/subs.js";
-
 import "./hamburgerMenu.css";
 
 function HamburgerMenu() {
@@ -9,7 +8,6 @@ function HamburgerMenu() {
   const [subs, setSubs] = useState([]);
   const showSidebar = () => setSidebar(!sidebar);
   const menuRef = useRef();
-
 
   useEffect(() => {
     const fetchSubs = async () => {
@@ -29,12 +27,10 @@ function HamburgerMenu() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  
-  for (let i = 0; i < subs.length; i++){
-    const subID = (subs[i].id)
-    console.log(subID)
+
+  for (let i = 0; i < subs.length; i++) {
+    const subID = subs[i].id;
   }
-  
 
   return (
     <>
@@ -45,13 +41,13 @@ function HamburgerMenu() {
           </button>
         </Link>
       </div>
+
       <div className={sidebar ? "ham-menu active" : "ham-menu"} ref={menuRef}>
         <ul className="ham-menu-subs" onClick={showSidebar}>
           <div className="hamburger-subreddits">
             <li id="subreddits-header">SUBREDDITS</li>
             {subs.map((sub, index) => (
               <li key={index}>
-                {/* <Link to={`/subs/${index + 1}`}>{sub.title}</Link> */}
                 <Link to={`/subs/${sub.id}`}>{sub.title}</Link>
               </li>
             ))}

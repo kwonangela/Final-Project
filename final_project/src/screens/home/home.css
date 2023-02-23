@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 5px;
   border-radius: 5px;
   align-items: center;
@@ -17,7 +17,7 @@
 }
 
 @media screen and (max-width: 390px) {
-  .home-page-filter-container{
+  .home-page-filter-container {
     width: 390px;
   }
 }
@@ -25,15 +25,15 @@
 .filter-text {
   font-weight: bold;
   margin-right: 10px;
-  vertical-align:middle;
-  color: #1DC9A0;
+  vertical-align: middle;
+  color: #1dc9a0;
 }
 
 #filter-button button {
   display: inline-block;
   align-items: center;
   background-color: white;
-  color: #1DC9A0;
+  color: #1dc9a0;
   padding: 8px;
   margin: 0px 5px;
 }
@@ -115,7 +115,7 @@
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .scroll-buttons div {
@@ -135,13 +135,14 @@
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.scroll-left, .scroll-right {
+.scroll-left,
+.scroll-right {
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 80px;
 }
 
-.news-feed-scroll::-webkit-scrollbar{
+.news-feed-scroll::-webkit-scrollbar {
   display: none;
 }
 
@@ -155,7 +156,14 @@
 .news-feed-sub-container {
   height: 110px;
   width: 110px;
-  background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.3), rgba(0,0,0,0.4), rgba(0,0,0,0.6), rgba(0,0,0,0.8), #000000);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8),
+    #000000
+  );
   border-radius: 10px;
   display: flex;
 }
@@ -198,5 +206,4 @@
   .home-page-filter-container {
     width: 380px;
   }
-
 }

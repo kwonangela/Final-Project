@@ -1,92 +1,94 @@
 body {
-    font-family: Arial, sans-serif; 
-    background: #353538;    
-  }
-  
+  font-family: Arial, sans-serif;
+  background: #353538;
+}
+
+.create-post {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+  padding: 100px;
+  padding-top: 10px;
+  background-color: #f2f2f2;
+  border-radius: 43px;
+  background: #467172;
+  box-shadow: inset -35px -35px 68px #467172, inset 35px 35px 68px #467172;
+  height: 340px;
+}
+
+.form-group {
+  color: black;
+}
+
+@media screen and (max-width: 390px) {
   .create-post {
-    position: absolute;
-    top: 28%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 600px;
-    margin: 0 auto;
+    width: 280px;
     margin-top: 200px;
-    text-align: center;
-    padding: 100px;
-    padding-top: 10px;
-    background-color: #f2f2f2;
-    border-radius: 43px;
-    background: #467172;
-    box-shadow: inset -35px -35px 68px #467172,
-                inset 35px 35px 68px #467172;
-    height: 340px;
-  }
-  .form-group {
-    color: black;
+    height: 425px;
   }
 
-  @media screen and (max-width: 390px){
-    .create-post {
-      width: 280px;
-      margin-top: 200px;
-      height: 425px;
-    }
-    .create-post h2 {
-      color: white;
-    }
-    .inputbox {
-      margin-top: 10px;
-    }
-     label {
-      color: white;
-    }
-  }
-  
   .create-post h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: white;
   }
-  
-  .create-post form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .inputbox {
+    margin-top: 10px;
   }
-  
-  .create-post .form-group {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 20px;
-    margin-top: 2.5rem;
+
+  label {
+    color: white;
   }
-  
-  .create-post label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    
-  }
-  
-  .create-post input,
-  .create-post textarea,
-  .create-post .ql-container {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid white;
-    box-sizing: border-box;
-  }
-  
-  .create-post select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    box-sizing: border-box;
-  }
-  
-  .input-form {
+}
+
+.create-post h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.create-post form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-post .form-group {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 2.5rem;
+}
+
+.create-post label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.create-post input,
+.create-post textarea,
+.create-post .ql-container {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+.create-post select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+.input-form {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -98,7 +100,7 @@ body {
   padding: 1rem;
   font-size: 1rem;
   color: #000000;
-  transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textUser {
@@ -107,19 +109,25 @@ body {
   color: #666666;
   pointer-events: none;
   transform: translateY(1rem);
-  transition: 150ms cubic-bezier(0.4,0,0.2,1);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input:focus, input:valid {
+.input:focus,
+input:valid {
   outline: none;
   box-shadow: 1px 2px 5px rgba(133, 133, 133, 0.523);
-  background-image: linear-gradient(to top, rgba(182, 182, 182, 0.199), rgba(252, 252, 252, 0));
+  background-image: linear-gradient(
+    to top,
+    rgba(182, 182, 182, 0.199),
+    rgba(252, 252, 252, 0)
+  );
   transition: background 4s ease-in-out;
 }
 
-.input:focus ~ label, input:valid ~ label {
+.input:focus ~ label,
+input:valid ~ label {
   transform: translateY(-95%) scale(0.9);
-  padding: 0 .2em;
+  padding: 0 0.2em;
   color: #000000be;
   left: 80px;
 }
@@ -132,113 +140,110 @@ body {
 }
 
 .inputbox {
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  text-align: left;
 }
 
 button {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 38px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  color: #ffffff;
+  background-color: #467172;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: all 0.15s linear;
+  border-color: #1dc9a0;
+  color: #1dc9a0;
+}
+
+button:hover {
+  background-color: rgba(29, 201, 160, 0.08);
+  border-color: #1dc9a0;
+  color: #1dc9a0;
+  transform: translateY(-5px) scale(1.05);
+}
+
+button:active {
+  background-color: transparent;
+  border-color: #1dc9a0;
+  color: #1dc9a0;
+  transform: translateY(5px) scale(0.95);
+}
+
+button:disabled {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: #8e8e93;
+  border-color: #8e8e93;
+}
+
+@media only screen and (max-width: 768px) {
+  .create-post {
+    padding: 50px;
     justify-content: center;
-    align-items: center;
-    padding: 15px 38px;
-    border-radius: 16px;
-    border: 1px solid transparent;
-    color: #FFFFFF;
-    background-color: #467172;
-    font-size: 16px;
-    letter-spacing: 1px;
-    transition: all 0.15s linear;
-    border-color: #1DC9A0;
-    color: #1DC9A0;
-   }
-   
-   button:hover {
-    background-color: rgba(29, 201, 160, 0.08);
-    border-color: #1DC9A0;
-    color: #1DC9A0;
-    transform: translateY(-5px) scale(1.05);
-   }
-   
-   button:active {
-    background-color: transparent;
-    border-color: #1DC9A0;
-    color: #1DC9A0;
-    transform: translateY(5px) scale(0.95);
-   }
-   
-   button:disabled {
-    background-color: rgba(255, 255, 255, 0.16);
-    color: #8E8E93;
-    border-color: #8E8E93;
-   }
-
-   @media only screen and (max-width: 768px) {
-    .create-post {
-      padding: 50px;
-      justify-content: center;
-    }
-  
-    .create-post h2 {
-      font-size: 20px;
-    }
-  
-    .create-post input,
-    .create-post textarea,
-    .create-post .ql-container {
-      font-size: 14px;
-    }
-  
-    .create-post select {
-      font-size: 14px;
-    }
-  
-    button {
-      padding: 10px 25px;
-      font-size: 14px;
-    }
-  }
-  
-  @media only screen and (max-width: 576px) {
-    .create-post {
-      padding: 25px;
-    }
-  
-    .create-post h2 {
-      font-size: 18px;
-    }
-  
-    .create-post input,
-    .create-post textarea,
-    .create-post .ql-container {
-      font-size: 12px;
-    }
-  
-    .create-post select {
-      font-size: 12px;
-    }
-  
-    button {
-      padding: 8px 20px;
-      font-size: 12px;
-    }
-  }
-  
-
-  .close-button-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .close-button{
-    height: 30px;
-    width: 20px;  
   }
 
-  .ql-editor {
-    color: white;
+  .create-post h2 {
+    font-size: 20px;
   }
 
+  .create-post input,
+  .create-post textarea,
+  .create-post .ql-container {
+    font-size: 14px;
+  }
 
+  .create-post select {
+    font-size: 14px;
+  }
 
+  button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .create-post {
+    padding: 25px;
+  }
+
+  .create-post h2 {
+    font-size: 18px;
+  }
+
+  .create-post input,
+  .create-post textarea,
+  .create-post .ql-container {
+    font-size: 12px;
+  }
+
+  .create-post select {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+}
+
+.close-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  height: 30px;
+  width: 20px;
+}
+
+.ql-editor {
+  color: white;
+}

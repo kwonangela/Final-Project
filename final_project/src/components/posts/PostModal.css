@@ -1,186 +1,180 @@
 .post-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-  
-  .hide-element {
-    display: none;
-  }
-  
-  .close-btn-container {
-    background-color: #467172;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 700px;
-    max-height: 80%;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  .modal-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-    color: white;
-  }
-  
-  .modal-image {
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  .texts {
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  .votes-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  #votes-div {
-    display: flex;
-    align-items: center;
-  }
-  
-  .votes {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .votes2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: 10px;
-    color: red;
-  }
-  
-  .upvote-button{
-    background-color: green;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
 
-  }
+.hide-element {
+  display: none;
+}
 
-  .downvote-button {
-    background-color: red;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .upvote-button:hover,
-  .downvote-button:hover {
-    color: black;
-  }
-  
-  .comments-container {
-    border-radius: 19px;
-    background: #3e4141;
-    box-shadow: inset 34px 34px 71px #1b1c1c,
-                inset -34px -34px 71px #616666; 
-  }
-  
-  .comments-scrollable {
-    max-height: 200px;
-    overflow: auto;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-  }
-  
-  .comment-box {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    
-    
-  }
-  
-  .comment-box textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid rgb(211, 211, 211);
-    resize: vertical;
-    min-height: 80px;
-    
-  }
-  
-  .comment-box button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .comment-box button:hover {
-    background-color: #555;
+.close-btn-container {
+  background-color: #467172;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  max-height: 80%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+}
+
+.modal-image {
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.texts {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.votes-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#votes-div {
+  display: flex;
+  align-items: center;
+}
+
+.votes {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.votes2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 10px;
+  color: red;
+}
+
+.upvote-button {
+  background-color: green;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.downvote-button {
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.upvote-button:hover,
+.downvote-button:hover {
+  color: black;
+}
+
+.comments-container {
+  border-radius: 19px;
+  background: #3e4141;
+  box-shadow: inset 34px 34px 71px #1b1c1c, inset -34px -34px 71px #616666;
+}
+
+.comments-scrollable {
+  max-height: 200px;
+  overflow: auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.comment-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(211, 211, 211);
+  resize: vertical;
+  min-height: 80px;
+}
+
+.comment-box button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-box button:hover {
+  background-color: #555;
+}
+
+.close-post-modal {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 25px;
+  height: 40px;
+  margin-top: 60px;
+  z-index: 1;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  width: 90%;
+}
+
+.comments-title {
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 390px) {
+  .post-modal {
+    margin-top: 40px;
+    width: 100vw;
   }
   
   .close-post-modal {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    width: 25px;
-    height: 40px;
-    margin-top: 60px;
+    margin-top: 65px;
+    margin-right: 20px;
     z-index: 1;
-  } 
-  
-  .comment {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 30px;
-    border: 1px solid #ccc; 
-    width: 90%;
   }
-
-  .comments-title {
-    
-    top: 0;
-    right: 0;
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 10px;
-    color: white;
-  }
-  
-  @media screen and (max-width: 390px) {
-    .post-modal {
-      margin-top: 40px;
-      width: 100vw;
-    }
-    .close-post-modal {
-      margin-top: 65px;
-      margin-right: 20px;
-      z-index: 1;
-    }
-  }
+}

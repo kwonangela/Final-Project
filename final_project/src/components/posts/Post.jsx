@@ -1,8 +1,5 @@
 import React from "react";
 import "./post.css";
-import { useState, useEffect } from "react";
-import { getComments, getComment } from "../../services/comments.js";
-import { getPost, getPosts } from "../../services/posts";
 
 export default function Post({ key, post, setModalPost, setDisplayModal, modalPost, comments }) {
   function handleClick() {

@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./CommentBox.css";
 import { createComment } from "../../services/comments";
-import {deletePost} from "../../services/posts.js"
-import { useParams, useNavigate } from "react-router-dom";
+import { deletePost } from "../../services/posts.js";
 
 function CommentBox({ postId, refresh, setRefresh }) {
   const [commentText, setCommentText] = useState("");
-  const [deleteHelp,setDeleteHelp] = useState(new Audio('https://www.myinstants.com/media/sounds/y2mate_B59ZHvq.mp3'
-  ))
+  const [deleteHelp, setDeleteHelp] = useState(
+    new Audio("https://www.myinstants.com/media/sounds/y2mate_B59ZHvq.mp3")
+  );
 
   const handleCommentChange = (event) => {
     setCommentText(event.target.value);
@@ -23,38 +23,31 @@ function CommentBox({ postId, refresh, setRefresh }) {
       post: postId,
       up_votes: 0,
       down_votes: 0,
-      commenter: 1 // replace with the ID of the commenter if needed
+      commenter: 1, // replace with the ID of the commenter if needed
     };
     try {
       const createdComment = await createComment(newComment);
-      console.log("Comment created:", createdComment);
       setCommentText("");
-      setRefresh(prev => !prev)
-      console.log(refresh)
+      setRefresh((prev) => !prev);
       // add code to update the UI with the new comment if needed
     } catch (error) {
       console.error("Error creating comment:", error);
     }
   };
 
-
-
-
   async function handleDelete() {
-    console.log(postId)
-    deleteHelp.play()
+    deleteHelp.play();
     await deletePost(postId);
     setTimeout(() => {
       window.location.reload();
-    }, "6000")
-    
-
+    }, "6000");
   }
-
 
   return (
     <form className="comment-form" onSubmit={handleCommentSubmit}>
-            <button className="eliminate" onClick={handleDelete}> 🗑️
+      <button className="eliminate" onClick={handleDelete}>
+        {" "}
+        🗑️
       </button>
       <textarea
         className="comment-input"

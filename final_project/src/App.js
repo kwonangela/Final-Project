@@ -5,25 +5,23 @@ import Subreddit from "./screens/subreddit/Subreddit.jsx";
 import SignUp from "./screens/signUp/SignUp.jsx";
 import { Routes, Route } from "react-router-dom";
 import Login from "./screens/login/Login.jsx";
-import {BrowserRouter as Router} from "react-router-dom"
+import { BrowserRouter as Router } from "react-router-dom";
 import { UserContext } from "./contexts/userContext.js";
 import { useState } from "react";
 
-
 function App() {
-  const [show, setShow] = useState(null)
+  const [show, setShow] = useState(null);
   const [user, setUser] = useState(null);
   const isUserLoggedIn = () => {
     return !!user;
-  }
+  };
 
   return (
     <div className="App">
-      <UserContext.Provider value={{user, setUser, isUserLoggedIn}}>
+      <UserContext.Provider value={{ user, setUser, isUserLoggedIn }}>
         <Router>
-          <nav> 
+          <nav>
             <Nav />
-            {/* <Nav handleSearch={handleSearch}/> */}
           </nav>
           <div>
             <Routes>
@@ -41,7 +39,3 @@ function App() {
 }
 
 export default App;
-
-
-
-

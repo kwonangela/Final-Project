@@ -1,12 +1,10 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import "./home.css";
 import Post from "../../components/posts/Post.jsx";
-import UserAssets from "../../components/user_assets/UserAssets.jsx";
 import PostModal from "../../components/posts/PostModal";
 import { getPosts } from "../../services/posts.js";
 import { getComments } from "../../services/comments.js";
 import { getNews } from "../../services/newsAPI.js";
-import { UserContext } from "../../contexts/userContext";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -15,23 +13,21 @@ export default function Home() {
   const [modalPost, setModalPost] = useState({});
   const [displayModal, setDisplayModal] = useState(false);
   const [sortPost, setSortPost] = useState("");
-  const {user, setUser, isUserLoggedIn} = useContext(UserContext)
-  const [refresh,setRefresh] = useState(false)
+  const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
+    const fetchPosts = async () => {
+      const allPosts = await getPosts();
+      if (sortPost === "likes") {
+        setPosts(allPosts.sort((a, b) => b.up_votes - a.up_votes));
+      } else if (sortPost === "dislikes") {
+        setPosts(allPosts.sort((a, b) => b.down_votes - a.down_votes));
+      } else {
+        setPosts(allPosts);
+      }
+    };
     fetchPosts();
   }, [sortPost]);
-
-  async function fetchPosts() {
-    const allPosts = await getPosts();
-    if (sortPost === "likes") {
-      setPosts(allPosts.sort((a, b) => b.up_votes - a.up_votes));
-    } else if (sortPost === "dislikes") {
-      setPosts(allPosts.sort((a, b) => b.down_votes - a.down_votes));
-    } else {
-      setPosts(allPosts);
-    }
-  }
 
   useEffect(() => {
     const fetchComment = async () => {
@@ -65,9 +61,11 @@ export default function Home() {
     const scrollRight = document.querySelector(".scroll-right");
 
     function handleScrollLeftEnter() {
-      setScrollInterval(setInterval(() => {
-        scrollContainer.scrollBy({ left: -20, behavior: "smooth" });
-      }, 50));
+      setScrollInterval(
+        setInterval(() => {
+          scrollContainer.scrollBy({ left: -20, behavior: "smooth" });
+        }, 50)
+      );
     }
 
     function handleScrollLeftLeave() {
@@ -75,9 +73,11 @@ export default function Home() {
     }
 
     function handleScrollRightEnter() {
-      setScrollInterval(setInterval(() => {
-        scrollContainer.scrollBy({ left: 20, behavior: "smooth" });
-      }, 50));
+      setScrollInterval(
+        setInterval(() => {
+          scrollContainer.scrollBy({ left: 20, behavior: "smooth" });
+        }, 50)
+      );
     }
 
     function handleScrollRightLeave() {
@@ -95,7 +95,7 @@ export default function Home() {
       scrollLeft.removeEventListener("mouseleave", handleScrollLeftLeave);
       scrollRight.removeEventListener("mouseenter", handleScrollRightEnter);
       scrollRight.removeEventListener("mouseleave", handleScrollRightLeave);
-    }
+    };
   }, [scrollInterval]);
 
   return (
@@ -139,7 +139,6 @@ export default function Home() {
           <button onClick={dislikes}> Not likes 👎 </button>
         </div>
       </div>
-      <div className="user-assets-container">{/* <UserAssets /> */}</div>
       <div className="home-page-post-container">
         {posts.map((post) => (
           <Post

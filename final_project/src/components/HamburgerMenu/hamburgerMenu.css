@@ -1,85 +1,86 @@
 .hamburger button {
-    margin-left: 10px;
-    padding: 10px;
-    color: white;
+  margin-left: 10px;
+  padding: 10px;
+  color: white;
 }
+
 .hamburger-menu {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 #menu-logo {
-    font-size: 25px;
-    width: 30px;
+  font-size: 25px;
+  width: 30px;
 }
-.ham-menu { 
-    width: 250px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    transition: 950ms;
-    background: linear-gradient(
-        #263d3d,
-        #467172,
-        #9eb5b6
-      );
+
+.ham-menu {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 950ms;
+  background: linear-gradient(#263d3d, #467172, #9eb5b6);
 }
 
 .ham-menu-subs {
-    margin-right: 2vh;
-    margin-left: -2vh;
+  margin-right: 2vh;
+  margin-left: -2vh;
 }
 
 .ham-menu.active {
-    left: 0;
-    transition: 350ms;
+  left: 0;
+  transition: 350ms;
 }
 
 #subreddits-header {
-    font-size: 30px;
+  font-size: 30px;
+  font-weight: bolder;
+  border: solid 1px #1dc9a0;
+}
+
+@media screen and (max-width: 390px) {
+  .hamburger button {
+    margin-left: 0px;
+    padding: 3px;
+    color: white;
+    padding-right: 7px;
+  }
+
+  .ham-menu {
+    width: 140px;
+  }
+
+  #subreddits-header {
+    font-size: 17px;
     font-weight: bolder;
-    border: solid 1px #1DC9A0;
+    padding: 15px 8px;
+    border: solid 1px #1dc9a0;
+  }
+  
+  .ham-menu-subs {
+    margin-right: 1vh;
+    margin-left: -4vh;
+  }
+}
+
+.hamburger-subreddits li {
+  padding: 20px 0px;
+  list-style: none;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.hamburger-subreddits a {
+  color: white;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 390px) {
-    .hamburger button {
-        margin-left: 0px;
-        padding: 3px;
-        color: white;
-        padding-right: 7px;
-    }
-    .ham-menu {
-        width: 140px;
-    }
-    #subreddits-header {
-        font-size: 17px;
-        font-weight: bolder;
-        padding: 15px 8px;
-        border: solid 1px #1DC9A0;
-    }
-    .ham-menu-subs {
-        margin-right: 1vh;
-        margin-left: -4vh;
-    }
-}
-
-.hamburger-subreddits li{
-    padding: 20px 0px;
-    list-style: none;
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    
-}
-
-.hamburger-subreddits a{
-    color: white;
-    text-decoration: none;
-}
-
-@media screen and (max-width: 390px) {
-    .hamburger-subreddits a{
-        font-size: 17px;
-    }
+  .hamburger-subreddits a {
+    font-size: 17px;
+  }
 }

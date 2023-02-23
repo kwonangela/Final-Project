@@ -1,4 +1,4 @@
-#subredditHeader {
+#subreddit-header {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
@@ -39,7 +39,6 @@
   display: flex;
   align-self: center;
   flex-flow: row wrap;
-  /* max-width: 400px; */
   max-width: 200px;
   margin: 5px;
   color: #467172;
@@ -113,11 +112,10 @@
   margin: auto;
   margin-bottom: 20px;
   color: white;
-  /* background-color: red; */
 }
 
 @media screen and (max-width: 390px) {
-  #subredditHeader {
+  #subreddit-header {
     margin-top: 80px;
     max-width: 390px;
     height: 100px;
@@ -125,10 +123,12 @@
     justify-content: space-around;
     width: 100%;
   }
+
   #user-avatar {
     margin-left: 2px;
     margin-top: -20px;
   }
+
   #sub-title {
     font-size: 25px;
     margin-left: 0px;
@@ -136,9 +136,11 @@
     margin-bottom: 0px;
     max-width: 290px;
   }
+
   #sub-link {
     margin-left: 10px;
   }
+
   #subreddit-description {
     font-size: 12px;
     margin-top: -18px;
@@ -155,20 +157,24 @@
     margin-top: -20px;
     margin-left: 0;
   }
+
   #subreddit-banner-dropdown-menu-label {
     margin-right: -40px;
   }
+
   .new-post-button {
     margin-top: -10px;
     height: 25px;
     margin-right: -40px;
   }
+
   .create-buttons #close-post {
     margin-top: -10px;
     height: 25px;
     margin-right: -38px;
     margin-left: 20px;
   }
+
   .sub-post .post-card {
     width: 99vw;
   }
